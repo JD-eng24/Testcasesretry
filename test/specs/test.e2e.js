@@ -31,3 +31,11 @@ describe('Add cart button test', () => {
         await LoginPage.clickCartMenu();
     })
 })
+
+describe('Cart Testing', () => {
+    it('should be clickable to go to your cart menu', async () => {
+        // await LoginPage.open();
+        // await LoginPage.login('standard_user', 'secret_sauce')
+        await LoginPage.Wheelcarts();
+    })
+})

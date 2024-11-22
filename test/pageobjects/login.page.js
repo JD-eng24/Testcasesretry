@@ -25,9 +25,12 @@ class LoginPage extends Page {
         return $('button[id="react-burger-menu-btn"]');
     }
 
-   get addCart () {
-    return $('button[id="add-to-cart-sauce-labs-bike-light"]');
+    get addCart () {
+        return $('button[id="add-to-cart-sauce-labs-bike-light"]');
    }
+    get Shoppingcart () {
+        return $('a[class="shopping_cart_link"]');
+    }
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
@@ -45,7 +48,6 @@ class LoginPage extends Page {
          await this.burger.click();
          await browser.pause(2000);
     }
-    
     /**
      * function to check if the add to cart button is working
      */
@@ -54,7 +56,12 @@ class LoginPage extends Page {
         await this.addCart.click();
         await browser.pause(4000);
     }
-    
+
+    async Wheelcarts() {
+        await this.Shoppingcart.waitForDisplayed();
+        await this.Shoppingcart.click();
+        await browser.pause(2000);
+    }
     /**
      * overwrite specific options to adapt it to page object
      */
