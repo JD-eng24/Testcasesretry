@@ -25,7 +25,9 @@ class LoginPage extends Page {
         return $('button[id="react-burger-menu-btn"]');
     }
 
-   
+   get addCart () {
+    return $('button[id="add-to-cart-sauce-labs-bike-light"]');
+   }
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
@@ -45,8 +47,13 @@ class LoginPage extends Page {
     }
     
     /**
-     * function to click to the logout button
+     * function to check if the add to cart button is working
      */
+    async clickCartMenu() {
+        await this.addCart.waitForDisplayed();
+        await this.addCart.click();
+        await browser.pause(4000);
+    }
     
     /**
      * overwrite specific options to adapt it to page object

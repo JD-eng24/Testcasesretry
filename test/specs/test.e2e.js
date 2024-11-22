@@ -23,3 +23,11 @@ describe('Hamburger Menu Test', () => {
          await LoginPage.clickBurgerMenu();
     });
 });
+
+describe('Add cart button test', () => {
+    it('Added item should be added.', async () => {
+        // await LoginPage.open();
+        // await LoginPage.login('standard_user', 'secret_sauce')
+        await LoginPage.clickCartMenu();
+    })
+})
